@@ -225,4 +225,4 @@ def most_points_scored
   game_hash.each do |location, team_attributes|
     team_attributes[:players].each do |player|
       points = player[:points]
-      points_leader = 
+      
