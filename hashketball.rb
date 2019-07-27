@@ -222,4 +222,5 @@ def most_points_scored
   points_leader = 0
   player_of_the_game = ""
 
-  game_hash.each do |location, 
+  game_hash.each do |location, team_attributes|
+    
