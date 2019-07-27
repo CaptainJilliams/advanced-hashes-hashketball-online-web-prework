@@ -218,7 +218,7 @@ def big_shoe_rebounds
   end
 end
 
-def most_points_scored(game)
+def most_points_scored
 
   ## correct practice format without repeating code
   ## game_teams.values.flat_map{ |team| team.fetch(:players).values }.max_by { |player| player.fetch(:points) }
