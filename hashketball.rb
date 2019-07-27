@@ -218,13 +218,4 @@ def big_shoe_rebounds
   end
 end
 
-def most_points_scored
- home_index = game_hash[:home][:players][:points].index( game_hash[:home][:players][:points].max)
- away_index = game_hash[:away][:players][:points].index( game_hash[:away][:players][:points].max)
- if game_hash[:home][:players][:points][home_index] > game_hash[:away][:players][:points][away_index]
- high_scorer = game_hash[:home][:players][:name][home_index]
- else
- high_scorer = game_hash[:away][:players][:name][away_index]
- end
- puts “The high scorer is #{high_scorer}.”
-end
+
