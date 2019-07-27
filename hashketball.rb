@@ -223,7 +223,7 @@ def most_points_scored
   ## correct practice format without repeating code
   ## game_teams.values.flat_map{ |team| team.fetch(:players).values }.max_by { |player| player.fetch(:points) }
 
-  home = game[:home][:players].max_by{|k,v| v[:points]}
+  home = game_hash[:home][:players].max_by{|k,v| v[:points]}
   puts home
   puts "Mason Plumlee scored the most for Brooklyn Nets"
 
