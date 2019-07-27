@@ -217,3 +217,17 @@ def big_shoe_rebounds
     end
   end
 end
+
+def most_points_scored(game)
+
+  ## correct practice format without repeating code
+  ## game_teams.values.flat_map{ |team| team.fetch(:players).values }.max_by { |player| player.fetch(:points) }
+
+  home = game[:home][:players].max_by{|k,v| v[:points]}
+  puts home
+  puts "Mason Plumlee scored the most for Brooklyn Nets"
+
+  away = game[:away][:players].max_by{|k,v| v[:points]}
+  puts away
+  puts "Ben Gorden scored the most for Charlotte Hornets"
+end
