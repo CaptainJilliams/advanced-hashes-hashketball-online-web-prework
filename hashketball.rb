@@ -219,16 +219,12 @@ def big_shoe_rebounds
 end
 
 def most_points_scored
-  most_points = 0
-  mvp = ''
-  game_hash.each do |home_away, keys|
-    keys[:players].each do |player|
-      points = player[:points]
-      if points > most_points
-        most_points = points
-        mvp = player[:player_name]
-      end
-    end
-  end
-  mvp
+ home_index = game_hash[:home][:players][:points].index( game_hash[:home][:players][:points].max)
+ away_index = game_hash[:away][:players][:points].index( game_hash[:away][:players][:points].max)
+ if game_hash[:home][:players][:points][home_index] > game_hash[:away][:players][:points][away_index]
+ high_scorer = game_hash[:home][:players][:name][home_index]
+ else
+ high_scorer = game_hash[:away][:players][:name][away_index]
+ end
+ puts “The high scorer is #{high_scorer}.”
 end
