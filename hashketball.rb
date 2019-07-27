@@ -219,17 +219,16 @@ def big_shoe_rebounds
 end
 
 def most_points_scored
-  points_leader = 0
-  player_of_the_game = ""
-
-  game_hash.each do |location, team_attributes|
-    team_attributes[:players].each do |player|
+  most_points = 0
+  mvp = ''
+  game_hash.each do |home_away, keys|
+    keys[:players].each do |player|
       points = player[:points]
-      if points > points_leader
-        points_leader = points
-        player_of_the_game = player[:player_name]
+      if points > most_points
+        most_points = points
+        mvp = player[:player_name]
       end
     end
   end
-  player_of_the_game
-end 
+  mvp
+end
