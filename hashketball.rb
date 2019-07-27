@@ -226,4 +226,4 @@ def most_points_scored
     team_attributes[:players].each do |player|
       points = player[:points]
       if points > points_leader
-        points_leader
+        points_leader = points 
